@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+/* Aplico imagen de fondo acá */
+
+#imagenFondo{
+   background-repeat: no-repeat;
+   background-image: url("/assets/imagenes/pizzaArgentaFondo.jpg");
+   background-size: cover; 
+}
