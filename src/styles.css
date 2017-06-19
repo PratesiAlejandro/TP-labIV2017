@@ -5,3 +5,8 @@
    background-image: url("/assets/imagenes/pizzaArgentaFondo.jpg");
    background-size: cover; 
 }
+
+#colorTitulo{
+
+ color: white;
+}
