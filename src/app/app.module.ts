@@ -6,6 +6,8 @@ import { RouterModule,Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { GoogleMapsComponent } from './google-maps/google-maps.component';
+import { AgmCoreModule } from 'angular2-google-maps/core';
+
 
 const rutasDenavegacion: Routes=[{path:'login',component:LoginComponent},
 {path: '', redirectTo:'/login',pathMatch: 'full'},
@@ -15,15 +17,22 @@ const rutasDenavegacion: Routes=[{path:'login',component:LoginComponent},
   declarations: [
     AppComponent,
     LoginComponent,
-    GoogleMapsComponent
+    GoogleMapsComponent   
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(rutasDenavegacion),
+     AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAONVaIzU_ppdeDH80ZUrUAxFvLxL7Kbgc'
+    }),
     HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+latitud: number =  -34.606562;
+longitud: number = -58.392633;
+ }
